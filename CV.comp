@@ -1,6 +1,6 @@
 #!/bin/bash
+pdflatex CV_Clement_Hottier.tex  
 pdflatex CV_Clement_Hottier.tex
-pdflatex CV_Clement_Hottier.tex
-pdflatex CV_C_HOTTIER_English.tex
-pdflatex CV_C_HOTTIER_English.tex
+pdflatex CV_Clement_Hottier_En.tex  
+pdflatex CV_Clement_Hottier_En.tex  
 rm *.aux *.out *.log
