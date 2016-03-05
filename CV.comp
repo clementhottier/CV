@@ -3,4 +3,4 @@ pdflatex CV_Clement_Hottier.tex
 pdflatex CV_Clement_Hottier.tex
 pdflatex CV_Clement_Hottier_En.tex  
 pdflatex CV_Clement_Hottier_En.tex  
-rm *.aux *.out *.log
+rm *.aux *.out *.log *.gz 2>/dev/null
