@@ -66,7 +66,7 @@ a4paper,
 %                            PERSONAL INFORMATION
 %-------------------------------------------------------------------------------
 % profile picture
-\cvprofilepic{pics/profile.png}
+\cvprofilepic{./photo_cv.jpg}
 % your name
 \cvname{Clément Hottier}
 % job title/career
@@ -74,9 +74,9 @@ a4paper,
 % date of birth
 \cvbirthday{22 Juin 1992}
 % phone number
-\cvphone{+33 6 60 35 56 85}
+\cvphone{+33 1 45 07 79 07}
 % personal website
-\cvsite{https://pandascience.net}
+% \cvsite{https://pandascience.net}
 % email address
 \cvmail{clement.hottier@obspm.fr}
 % pgp key
@@ -90,10 +90,10 @@ a4paper,
 % overwrite default icons and order of personal information
 \renewcommand{\personaltable}{%
   \begin{personal}
-    \circleicon{\faAt}       & \cvmail \\
-    \circleicon{\faGlobe}    & \cvsite \\
-    \circleicon{\faPhone}    & \cvphone \\
     \circleicon{\faInfo}     & \cvbirthday \\
+    \circleicon{\faAt}       & \cvmail \\
+    % \circleicon{\faGlobe}    & \cvsite \\
+    \circleicon{\faPhone}    & \cvphone \\
     % add another line
   \end{personal}
 }
@@ -119,56 +119,6 @@ a4paper,
 
 }
 
-
-%-------------------------------------------------------------------------------
-%                              SIDEBAR 2nd PAGE
-%-------------------------------------------------------------------------------
-\addtobacksidebar{
-  \profilesection{About Me}
-  \aboutme{
-    The giant panda is a terrestrial animal and primarily spends its life
-    roaming and feeding in the bamboo forests of the Qinling Mountains and in
-    the hilly province of Sichuan.
-  }
-
-  \profilesection{Diagrams}
-  \chartlabel{Bubble Diagram}
-  \begin{figure}\centering
-    \smartdiagram[bubble diagram]{
-      \textcolor{white}{\textbf{Being a}} \\ 
-      \textcolor{white}{\textbf{Panda}}, % center bubble	
-      \textcolor{black!90}{Eating},
-      \textcolor{black!90}{Sleeping},
-      \textcolor{black!90}{Rolling},
-      \textcolor{black!90}{Playing},
-      \textcolor{black!90}{Chilling}
-    }
-  \end{figure}
-
-  \chartlabel{Wheel Chart}
-
-  \wheelchart{4em}{2em}{%
-    20/3em/maincolor!50/Chill,
-    15/3em/maincolor!15/Play,
-    30/4em/maincolor!40/Sleep,
-    20/3em/maincolor!20/Eat
-  }
-
-  \profilesection{Barskills}
-  \barskill{\faSkyatlas}{Wearing asian rice hats}{60}
-  \barskill{\faImage}{Playing Chess}{30}
-  \barskill{\faMusic}{Playing the bamboo flute}{50}
-
-  \profilesection{Memberships}
-  \begin{memberships}
-    \membership{pics/logo.png}{PandaScience.net}
-    \membership{pics/logo.png}{Here's some longer text spanning over more than
-    only one line}
-  \end{memberships}
-
-}
-
-
 %-------------------------------------------------------------------------------
 %                         TABLE ENTRIES RIGHT COLUMN
 %-------------------------------------------------------------------------------
@@ -176,98 +126,72 @@ a4paper,
 
 \makefrontsidebar
 
-\cvsection{Expérience Professionnelle}
+\cvsection{Expériences Professionnelles}
 \begin{cvtable}
-  \cvitem{2016-}{Doctorat}{Observatoire de Paris - Gepi}{Étude de la structure de la Voie Lacté
+  \cvitem{2016-}{Doctorat}{Observatoire de Paris - Gepi}{Étude de la structure de la Voie
+    Lactée
   avec les données Gaia, 2MASS, UKIDSS, VVV}
   \cvitem{Mars - Juillet 2016}{Stage M2}{Institut d'Astrophysique de Paris}
   {Modélisation non sphérique des amas de galaxies par méthode de Metropolis Astings}
   \cvitem{Avril - Juillet 2015}{Stage M1}{Observatoire de Paris - LERMA}
-  {Étude de l'impact des Quasar radio Loud sur milieu intergalactique à l'époque de la
+  {Étude de l'impact des Quasars radio Loud sur milieu intergalactique à l'époque de la
   réionisation}
 \end{cvtable}
 
 
-\cvsection{Formation}
+\cvsection{Formations}
 \begin{cvtable}
   \cvitem{2016-}{Doctorat}{Observatoire de Paris - Gepi}{}
-  \cvitem{2015-2016}{Master 2 Dynamique des systèmes gravitationnelle}{Observatoire de Paris}{}
-  \cvitem{2014-2016}{Master 1 Science de L'univers et technologies spatiales}{Observatoire de Paris}{}
+  \cvitem{2015-2016}{Master 2 Dynamique des systèmes gravitationnels}{Observatoire de Paris}{}
+  \cvitem{2014-2015}{Master 1 Sciences de L'univers et technologies spatiales}{Observatoire de Paris}{}
   \cvitem{2011-2014}{Licence Physique fondamentale}{Université Lille 1}{}
 \end{cvtable}
 
-\cvsection{Publications}
+\cvsection{Communications}
+\subsection{Publications}
 \begin{cvtable}
-  \cvitem{2010}{Cooking: 100 recipes for lazy Pandas}{Panda's
-  Culinary World}{}
-  \cvitem{2005}{Pandastasia}{Bamboo Books Assoc.}{}
-  \cvitem{2000}{The Panda Way - A guide for mastering everyday life as a Panda}
-  {Young Panda's Journal}{}
+  \cvitem{Février 2019}
+  {Gaia-2MASS 3D maps of Galactic interstellar dust\\within 3 kpc}
+  {\href{https://ui.adsabs.harvard.edu/\#abs/2019arXiv190204116L/abstract}{A\&A Sous Press}}
+  {Lallement \textit{et. al.}}
+
+  \cvitem{Août 2018}
+  {Imprints of quasar duty cycle on the 21-cm signal from the Epoch of Reionization}
+  {\href{https://ui.adsabs.harvard.edu/\#abs/2019arXiv190204116L/abstract}{MNRAS}}
+  {Bolgar \textit{et. al.}}
 \end{cvtable}
 
-
-\cvsection{Awards}
+\subsection{Conférences}
 \begin{cvtable}
-  \cvitem{2010 -- now}{Panda of the Year}{Panda World Forum}{}
-  \cvitem{2005 -- now}{Face of World Wide Fund for Nature}{WWF}{}
-  \cvitem{2000}{Winner of Bamboo Sprouts Eating Contest}{Bamboo Society}{}
+  \cvitem{Avril 2019}
+  {Dust distribution in the Milky Way}
+  {$53^{rd}$ ESLAB}
+  {Hottier \textit{et. al.}}
+
+  \cvitem{Juillet 2018}
+  {Dust and star distribution in the Milky Way disk}
+  {\href{https://ui.adsabs.harvard.edu/\#abs/2018sf2a.conf..345H/abstract}{SF2A Proceeding}}
+  {Hottier \textit{et. al.}}
 \end{cvtable}
 
-
-\cvsection{Extra-Curricular Activities}
+\cvsection{Enseignement}
+\subsection{Monitorat}
 \begin{cvtable}
-  \cvitemshort{Relaxing}{Master the fine art of relaxing everywhere}
-  \cvitemshort{Music}{Playing the bamboo flute in the 1st Panda Orchestra}
-  \cvitemshort{Education}{Teaching young pandas to be more panda-like}
+  \cvitem{2016-2019}{Travaux dirigés}{M1 SUTS}{Mécanique Quantique -
+  Programmation Fortran}
+  
+  \cvitem{2016-2019}{Cours magistral}{M1 SUTS} {Programmation Fortran - Latex}
+
+  \cvitem{2016-2018}{Tutorat à distance}{DU LU}{6 étudiants}
+
+  \cvitem{2016-2019}{Observations astronomiques}{DU ECU - FP}{Stage à l'Observatoire de Haute
+  Provence T152 - Soirée lunette Arago}
 \end{cvtable}
 
-
-\newpage
-\makebacksidebar
-
-
-\cvsection{section}
-\subsection{Subsection}
+\subsection{Médiation scientifique}
 \begin{cvtable}
-  \cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
+  \cvitem{2018}{Conférence Pint of science}{Paris}{La mission spatiale Gaia ; avec Olivier La
+  Marle}
 \end{cvtable}
-
-\cvsection{cvitem}
-\subsection{Multi-line with longer description}
-\begin{cvtable}
-  \cvitem{date}{Description}{location}{Some longer and more detailed 
-  description, that takes two lines	of space instead of only one.}
-  \cvitem{date}{Description}{location}{Some longer and more detailed 
-  description, that takes two lines	of space instead of only one.}
-  \cvitem{date}{Description}{location}{Some longer and more detailed 
-  description, that takes two lines	of space instead of only one.}
-\end{cvtable}
-
-\subsection{One-line without description}
-\begin{cvtable}
-  \cvitem{Award}{One-line description}{Sponsor}{}
-  \cvitem{Award}{One-line description}{Sponsor}{}
-  \cvitem{Award}{One-line description}{Sponsor}{}
-\end{cvtable}
-
-\cvsection{cvitemshort}
-\subsection{One-line}
-\begin{cvtable}
-  \cvitemshort{Key}{Some further description}
-  \cvitemshort{Key}{Some further description}
-  \cvitemshort{Key}{Some further description}
-\end{cvtable}
-
-\subsection{Multi-line with longer description}
-\begin{cvtable}
-  \cvitemshort{Key}{Some further description. Can fill even more than
-  only one single line while still keeping the correct indendation level.}
-  \cvitemshort{Key}{Some further description. Can fill even more than
-  only one single line while still keeping the correct indendation level.}
-  \cvitemshort{Key}{Some further description. Can fill even more than
-  only one single line while still keeping the correct indendation level.}
-\end{cvtable}
-
-\cvsignature
 
 \end{document} 
