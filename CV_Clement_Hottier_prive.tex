@@ -1,0 +1,235 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo 
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+ a4paper, 10.5pt,
+%   showframes,
+%   maincolor=cvgreen,
+%   sectioncolor=red,
+%   subsectioncolor=orange
+  sidebarwidth=0.32\paperwidth,
+%   topbottommargin=0.03\paperheight,
+%   leftrightmargin=20pt
+]{fortysecondscv}
+
+\definecolor{linkcol}{HTML}{0066CC}
+\hypersetup{colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=linkcol,
+  }
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% take care of proper font encoding
+\ifxetex
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX}
+  % \newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  % \usepackage[sfdefault]{noto} % use noto google font
+\fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+  % defaut font size is \large, so adjust to harmonize with sidebar layout
+  bubble center node font = \footnotesize,
+  bubble node font = \footnotesize,
+  % default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+  bubble center node size = 0.4\sidebartextwidth,
+  bubble node size = 0.25\sidebartextwidth,
+  distance center/other bubbles = 1.5em,
+  % set center bubble color
+  bubble center node color = maincolor!70,
+  % define the list of colors usable in the diagram
+  set color list = {maincolor!10, maincolor!40,
+  maincolor!20, maincolor!60, maincolor!35},
+  % sets the opacity at which the bubbles are shown
+  bubble fill opacity = 0.8,
+}
+
+\titlespacing{\section}{0pc}{2pt}{1pt}
+\titlespacing{\subsection}{0pc}{1pc}{0pc}
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+% profile picture
+\cvprofilepic{./photo_cv.jpg}
+% your name
+\cvname{Clément Hottier}
+% job title/career
+\cvjobtitle{Data Scientist}
+% date of birth
+\cvbirthday{22 Juin 1992}
+% phone number
+\cvphone{+33 6 60 35 56 85}
+% personal website
+% \cvsite{https://pandascience.net}
+% email address
+\cvmail{clement.hottier@obspm.fr}
+% pgp key
+% add additional information
+% \newcommand{\additional}{some more?}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% overwrite default icons and order of personal information
+\renewcommand{\personaltable}{%
+  \begin{personal}
+    \circleicon{\faInfo}     & \cvbirthday \\
+    \circleicon{\faAt}       & \cvmail \\
+    % \circleicon{\faGlobe}    & \cvsite \\
+    \circleicon{\faPhone}    & \cvphone \\
+    % add another line
+  \end{personal}
+}
+
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+  % include gosquare national flags from https://github.com/gosquared/flags;
+  % naming according to ISO 3166-1 alpha-2 country codes
+  \graphicspath{{pics/flags/}}
+
+  \profilesection{Langue}
+  \pointskill{\flag{FR.png}}{Français}{5}
+  \pointskill{\flag{GB.png}}{Anglais}{4}
+  \pointskill{\flag{ES.png}}{Espagnol}{1}
+
+  \profilesection{Programmation}
+  \barskill{}{ADQL/SQL}{85}
+  \barskill{}{Python : numpy/scipy/pandas}{95}
+  \barskill{}{Java}{90}
+  \barskill{}{Fortran/C}{70}
+  \barskill{}{bash}{85}
+  \barskill{}{Cluster computing (slurm)}{95}
+  \barskill{}{git}{75}
+  \barskill{}{Docker}{60}
+
+}
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Expériences Professionnelles}
+\begin{cvtable}
+  \cvitem{2019-2020}{Enseignant Chercheur (ATER)}{Observatoire de Paris}{- Exploration
+    de données et identification croisée de structures\\
+    - Big Data\\
+    - Distribution de base de données\\
+    - Administration de données non réduite (HDF5)\\
+    - Implémentation d'algorithme de classification et création de catalogues
+    }
+    \cvitem{2016-2019}{Doctorant (Avec mission d'enseignement)}{Observatoire de Paris}{
+    - Conception et mise au point algorithme d'analyse par déconvolution Bayésienne\\
+    - Implémentation et Intégration continue d'un logiciel d'analyse de données (Git et
+    GitLab CI)\\
+    - Gestion d'un logiciel d'analyse en mode production dans un centre de calcul ($\approx
+  200\.000$hCPU) et des sorties brut ($10$TB)\\
+   - Développement du Pipeline de post processing et de visualisation 
+    
+}
+
+  \cvitem{Mars - Juillet 2016}{Stage Master 2}{Institut d'Astrophysique de Paris}
+  {Conception et mise au point d'un modèle d'analyse par maximisation de vraissemblance et
+  chaine de Markov}
+  % \cvitem{Avril - Juillet 2015}{Stage M1}{Observatoire de Paris - LERMA}
+  % {Étude de l'impact des Quasars radio loud sur le milieu intergalactique à l'époque de la
+  % réionisation}
+\end{cvtable}
+
+\cvsection{Expériences d'enseignement}
+\subsection{Universitaire}
+\begin{cvtable}
+  \cvitem{2016-2020}{Cours Magistraux et Travaux dirigés}{Observatoire de Paris}{
+  Programmation Scientifique - Programmation Latex - Mécanique Quantique}
+  
+  \cvitem{2016-2020}{Stage d'observation OHP}{Observatoire de Paris/Univ Paris-Saclay}
+  {- Encadrement d'observation sur instruments professionnels\\
+   - Développement de la boite à outil de réduction des données et distribution en package
+ python et conteneur Docker}
+\end{cvtable}
+
+\subsection{Médiation scientifique}
+\begin{cvtable}
+  \cvitem{2018}
+  {Conférence Pint of science}
+  {\href{https://pintofscience.fr/}{\underline{Pint of science France}}}{La mission spatiale Gaia}
+  \cvitem{2019}{Conférence étoile en
+  scène}{\href{https://www.obspm.fr/etoiles-en-scene-au-grand-rex.html}{\underline{Com Obs. Paris}}}{Conférence express au Grand Rex}
+\end{cvtable}
+
+
+\cvsection{Communications}
+\subsection{Publications}
+\begin{cvtable}
+  \cvitem{2020}
+  {FEDReD II : 3D Extinction Map with 2MASS and Gaia DR2 data}
+  {\href{https://ui.adsabs.harvard.edu/abs/2020arXiv200703734H/abstract}{\underline{sous
+  presse}}}
+  {}
+
+  \cvitem{2020}
+  {FEDReD I: 3D dust and stellar maps by \\Bayesian deconvolution}
+  {\href{https://ui.adsabs.harvard.edu/abs/2020arXiv200704455B/abstract}{\underline{sous presse}}}
+  {}
+\end{cvtable}
+
+\subsection{Conférences International}
+\begin{cvtable}
+  \cvitem{Avril 2019}
+  {Dust distribution in the Milky Way}
+  {\href{https://ui.adsabs.harvard.edu/abs/2019gaia.confE..55H/abstract}{\underline{$53^{rd}$ ESLAB}}}
+  {}
+
+  \cvitem{Juillet 2018}
+  {Dust and star distribution in the Milky Way disk}
+  {\href{https://ui.adsabs.harvard.edu/\#abs/2018sf2a.conf..345H/abstract}{\underline{SF2A Proceeding}}}
+  {}
+\end{cvtable}
+
+
+\cvsection{Responsabilités Administratives}
+\begin{cvtable}
+  \cvitemshort{2017-2019}{Représentant des étudiants de l'Observatoire de
+  Paris au Conseil d'administration (CA), au conseil de l'Unité Formation-Enseignement (CUFE)
+et au conseil de la documentation (CDOC)}
+
+  \cvitemshort{2019}{Membre du comité de pilotage pour la réforme du Master 1 SUTS de
+l'Observatoire de Paris}
+\end{cvtable}
+
+\cvsection{Formations}
+\begin{cvtable}
+  \cvitem{2016-2019}{\textbf{Doctorat} (\href{https://tel.archives-ouvertes.fr/tel-02879238/document}{Manuscrit
+  en ligne})}{Observatoire de Paris}{}
+  \cvitem{2014-2016}{Master}{Observatoire de Paris}{Dynamique des systèmes gravitationnels}
+  % \cvitem{2014-2015}{Master 1}{Observatoire de Paris}{Sciences de L'univers et technologies spatiales}
+  % \cvitem{2011-2014}{Licence}{Université Lille 1}{Physique fondamentale}
+\end{cvtable}
+\end{document} 
