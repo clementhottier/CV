@@ -189,8 +189,6 @@
       Mise au point d'un Logiciel d'analyse et modélisation de photométrie et d'astrométrie par
       déconvolution bayésienne :
       \begin{itemize}[noitemsep,nolistsep,leftmargin=*]
-        \item Rédaction d'une documentation, en Javadoc, spécifiant les besoins et les
-          algorithmes 
         \item Écriture de l'algorithme de déconvolution en Java (orienté objet), passage de
           Ant/Ivy à Gradle pour la compilation et la gestion des dépendance, et de SVN à Git
           pour la gestion de version et la collaboration
@@ -200,6 +198,8 @@
         \item Changement des formats de données, choix de HDF5 pour sa rapidité d'accès et sa
           compatibilité avec Java (JHDF5) et Python 3. Choix d'une base SQLite 3 pour
           l'indexation des résultats (vitesse accées x100, occupation x0.5)
+        \item Rédaction d'une documentation, en Javadoc, spécifiant les besoins et les
+          algorithmes 
           \item Écriture des tests unitaire et non-régression (JUnit), automatisation des tests
             et génération de la documentation avec GitlabCI, Gitlab Pages et docker.
           \item Utilisation d'un Mesocentre et de SLURM pour test des versions et application
