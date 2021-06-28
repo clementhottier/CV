@@ -120,11 +120,13 @@
   \pointskill{\flag{ES.png}}{Espagnol}{1}
 
   \profilesection{Programmation}
-  \barskill{\faIcon{database}}{ADQL/SQL}{85}
-  \barskill{\faPython}{Python : numpy/scipy/pandas}{95}
   \barskill{\faCoffee}{Java}{90}
-  \barskill{}{Fortran/C}{70}
+  \barskill{\faPython}{Python : numpy/scipy/pandas}{95}
+  \barskill{}{R}{50}
+  \barskill{}{Fortran}{70}
+  \barskill{}{C}{70}
   \barskill{\faIcon{linux}}{Bash}{85}
+  \barskill{\faIcon{database}}{ADQL/SQL}{85}
   \barskill{}{Cluster computing (slurm)}{95}
   \barskill{\faIcon{code-branch}}{Git/SVN}{75}
   \barskill{\faDocker}{Docker}{60}
@@ -153,8 +155,8 @@
     Conception d'une bibliothèque d'exploration de données 3D:
     \begin{itemize}[noitemsep,nolistsep,leftmargin=*]
       \item Implémentation en python3 orienté objet en utilisant matplotlib, scipy, numpy
-      \item Optimisation mémoire et implémentation d'un "lazy mode" pyh5
-      \item implémentation de la prise charge des healpix 
+      \item Optimisation de l'usage mémoire par chargement partiel (h5py)
+      \item implémentation de la prise charge des healpix (healpy)
     \end{itemize}
     Conception d'algorithme de
   tomographie 3D (python3 scipy,numpy)}
@@ -162,10 +164,10 @@
   \cvitem{2019-2020}{Observatoire de Paris-UFE/GEPI}{}{
     Exploitation de cube 3D de densité :
     \begin{itemize}[noitemsep,nolistsep,leftmargin=*]
-      \item Administration des cube de données brute en HDF5 (python3:h5py et Java:JHDF5)
+      \item Indexation de données en SQLite3 et stockage des données brute en HDF5 (python3:h5py et Java:JHDF5)
       \item Implémentation d'un algorithme de segmentation en Python 3 (orienté objet, numpy,
         scipy, numba)
-      \item Mise a disposition de données réduite et catalogue (ADQL, Table fits, Table VO)
+      \item Mise a disposition de données réduite et catalogue (Table fits, Table VO)
     \end{itemize}
     % - Exploration de données et identification croisée de structures (Python 3 :
     % matplotlib/pandas)\\
@@ -178,7 +180,7 @@
       \item Réduction des images CCD (bias, PLU) et extraction de la photométrie 
       \item Réduction spectroscopique (bias, PLU) et automatisation de la calibration en
         longueur d'onde
-      \item Documentation et cookbook en markdown et jupyter notebook
+      \item Documentation en markdown et cookbook sous forme de jupyter notebook
       \item Distribution sous la forme d'image docker
     \end{itemize}
     }
